@@ -26,7 +26,7 @@ const features = [
 
 export default function FeatureStrip() {
   return (
-    <section className="border-y border-white/5 bg-[#0a121c]">
+    <section className="border-y border-white/5 bg-[#0a121c]/50 backdrop-blur-[2px]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:px-8">
         {features.map((feature, index) => {
           const Icon = feature.icon;

@@ -106,18 +106,18 @@ export default function PortfolioPage() {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <section className="border-b border-slate-100 bg-slate-50/80">
+        <section className="border-b border-white/10 bg-[#060b10]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <p className="inline-flex rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+            <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#0a121c] px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
               Portfolio
             </p>
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-brand-950 sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Selected work that{" "}
-              <span className="bg-linear-to-r from-brand-950 via-brand-600 to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-white via-[#008DDA] to-sky-500 bg-clip-text text-transparent">
                 drives real outcomes
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-500">
+            <p className="mt-4 max-w-2xl text-lg text-slate-400">
               A look at how Elite Solution pairs financial clarity with digital
               execution — across accounting, websites, branding, SEO, and growth
               campaigns.
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
                   className={`glow-btn-light rounded-full border px-4 py-1.5 text-xs font-semibold ${
                     index === 0
                       ? "border-brand-600 bg-brand-600 text-white"
-                      : "border-slate-200 bg-white text-slate-600"
+                      : "border-white/10 bg-[#0a121c] text-slate-300"
                   }`}
                 >
                   {filter}
@@ -145,7 +145,7 @@ export default function PortfolioPage() {
           {featured.map((project, index) => (
             <article
               key={project.title}
-              className={`grid glow-card overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm lg:grid-cols-2 ${
+              className={`grid glow-card overflow-hidden rounded-3xl border border-white/10 bg-[#0a121c] shadow-sm lg:grid-cols-2 ${
                 index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
@@ -163,20 +163,20 @@ export default function PortfolioPage() {
                 <p className="text-xs font-semibold tracking-wide text-brand-600 uppercase">
                   {project.category}
                 </p>
-                <h2 className="mt-3 text-2xl font-bold tracking-tight text-brand-950 sm:text-3xl">
+                <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                   {project.title}
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-slate-500">
+                <p className="mt-4 text-base leading-relaxed text-slate-400">
                   {project.description}
                 </p>
-                <p className="mt-5 inline-flex w-fit rounded-full bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-700">
+                <p className="mt-5 inline-flex w-fit rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-semibold text-emerald-400">
                   {project.result}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
+                      className="rounded-full border border-white/10 bg-[#0c1828] px-3 py-1 text-xs font-medium text-slate-300"
                     >
                       {tag}
                     </span>
@@ -188,13 +188,13 @@ export default function PortfolioPage() {
         </section>
 
         {/* Grid projects */}
-        <section className="border-t border-slate-100 bg-slate-50/60">
+        <section className="border-t border-white/10 bg-[#0a121c]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold tracking-tight text-brand-950">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
                 More selected projects
               </h2>
-              <p className="mt-3 text-lg text-slate-500">
+              <p className="mt-3 text-lg text-slate-400">
                 Additional engagements across finance, design, SEO, and lifecycle
                 marketing.
               </p>
@@ -204,9 +204,9 @@ export default function PortfolioPage() {
               {rest.map((project) => (
                 <article
                   key={project.title}
-                  className="glow-card group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-600/5"
+                  className="glow-card group overflow-hidden rounded-2xl border border-white/10 bg-[#0a121c] shadow-sm transition-all hover:-translate-y-1 hover:border-[#008DDA]/30 hover:shadow-xl hover:shadow-brand-600/5"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#0c1828]">
                     <Image
                       src={project.image}
                       alt={project.imageAlt}
@@ -215,7 +215,7 @@ export default function PortfolioPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-950/40 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                    <span className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-brand-700 opacity-0 shadow transition-opacity group-hover:opacity-100">
+                    <span className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#008DDA] opacity-0 shadow transition-opacity group-hover:opacity-100">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -223,13 +223,13 @@ export default function PortfolioPage() {
                     <p className="text-[11px] font-semibold tracking-wide text-brand-600 uppercase">
                       {project.category}
                     </p>
-                    <h3 className="mt-2 text-base font-bold text-brand-950">
+                    <h3 className="mt-2 text-base font-bold text-white">
                       {project.title}
                     </h3>
-                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">
+                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-400">
                       {project.description}
                     </p>
-                    <p className="mt-4 text-sm font-semibold text-emerald-700">
+                    <p className="mt-4 text-sm font-semibold text-emerald-400">
                       {project.result}
                     </p>
                   </div>
@@ -252,7 +252,7 @@ export default function PortfolioPage() {
             </div>
             <Link
               href="/contact"
-              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#008DDA] transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
               Start a project
               <ArrowRight className="h-4 w-4" />

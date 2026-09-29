@@ -82,18 +82,18 @@ export default function AboutPage() {
       <SiteHeader />
       <main>
         {/* Page hero */}
-        <section className="border-b border-slate-100 bg-slate-50/80">
+        <section className="border-b border-white/10 bg-[#060b10]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <p className="inline-flex rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+            <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#0a121c] px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
               About Elite Solution
             </p>
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-brand-950 sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Empowering growth with{" "}
-              <span className="bg-linear-to-r from-brand-950 via-brand-600 to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-white via-[#008DDA] to-sky-500 bg-clip-text text-transparent">
                 financial clarity and digital strength
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-500">
+            <p className="mt-4 max-w-2xl text-lg text-slate-400">
               We specialize in helping business owners stay compliant, make
               smarter decisions, and scale with confidence — through one
               accountable partner.
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 block.reverse ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-lg shadow-slate-200/50">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0c1828] shadow-lg shadow-black/30">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={block.image}
@@ -123,20 +123,20 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <p className="inline-flex rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+                <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#008DDA]/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
                   {block.eyebrow}
                 </p>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-950 sm:text-4xl">
+                <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   {block.title}
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-slate-500">
+                <p className="mt-4 text-lg leading-relaxed text-slate-400">
                   {block.body}
                 </p>
                 <ul className="mt-6 space-y-3">
                   {block.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-center gap-3 text-sm font-medium text-slate-700"
+                      className="flex items-center gap-3 text-sm font-medium text-slate-300"
                     >
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white">
                         <BadgeCheck className="h-3.5 w-3.5" />
@@ -151,13 +151,13 @@ export default function AboutPage() {
         </div>
 
         {/* Values */}
-        <section className="border-y border-slate-100 bg-slate-50/80">
+        <section className="border-y border-white/10 bg-[#060b10]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="inline-flex rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+              <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#0a121c] px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
                 Our promise
               </p>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-950 sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 What we stand for
               </h2>
             </div>
@@ -167,15 +167,15 @@ export default function AboutPage() {
                 return (
                   <div
                     key={value.title}
-                    className="glow-card rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+                    className="glow-card rounded-2xl border border-white/10 bg-[#0a121c] p-6 shadow-sm"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white">
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="mt-4 text-base font-bold text-brand-950">
+                    <h3 className="mt-4 text-base font-bold text-white">
                       {value.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                    <p className="mt-2 text-sm leading-relaxed text-slate-400">
                       {value.description}
                     </p>
                   </div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/contact"
-              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#008DDA] transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
               Get in touch
               <ArrowRight className="h-4 w-4" />

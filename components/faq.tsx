@@ -26,7 +26,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20 bg-[#060b10]">
+    <section id="faq" className="scroll-mt-20 bg-[#060b10]/55 backdrop-blur-[2px]">
       <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
         <Reveal variant="up">
           <div className="text-center">

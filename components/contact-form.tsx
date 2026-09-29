@@ -41,22 +41,22 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-brand-950 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none";
+    "w-full rounded-xl border border-white/10 bg-[#0a121c] px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border border-slate-100 bg-slate-50 p-6 shadow-sm sm:p-8"
+      className="rounded-2xl border border-white/10 bg-[#0c1828] p-6 shadow-sm sm:p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-brand-950">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-white">
             Full name
           </label>
           <input id="name" name="name" required placeholder="Jane Smith" className={inputClass} />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-brand-950">
+          <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-white">
             Work email
           </label>
           <input
@@ -69,13 +69,13 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="company" className="mb-1.5 block text-sm font-semibold text-brand-950">
+          <label htmlFor="company" className="mb-1.5 block text-sm font-semibold text-white">
             Company
           </label>
           <input id="company" name="company" placeholder="Company Inc." className={inputClass} />
         </div>
         <div>
-          <label htmlFor="service" className="mb-1.5 block text-sm font-semibold text-brand-950">
+          <label htmlFor="service" className="mb-1.5 block text-sm font-semibold text-white">
             Service needed
           </label>
           <select id="service" name="service" className={inputClass} defaultValue="Other / Not sure yet">
@@ -85,7 +85,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="message" className="mb-1.5 block text-sm font-semibold text-brand-950">
+          <label htmlFor="message" className="mb-1.5 block text-sm font-semibold text-white">
             How can we help?
           </label>
           <textarea
@@ -113,7 +113,7 @@ export default function ContactForm() {
       </button>
 
       {status === "success" && (
-        <p className="mt-4 rounded-xl bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
+        <p className="mt-4 rounded-xl bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-400">
           Thanks — we&apos;ll get back to you within one business day.
         </p>
       )}

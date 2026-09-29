@@ -1,4 +1,5 @@
 import SiteHeader from "@/components/site-header";
+import PageBackground from "@/components/page-background";
 import Hero from "@/components/hero";
 import FeatureStrip from "@/components/feature-strip";
 import Services from "@/components/services";
@@ -33,18 +34,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="bg-[#060b10] text-white">
-        <SiteHeader />
-        <main>
-          <Hero />
-          <FeatureStrip />
-          <Services />
-          <AboutPreview />
-          <PortfolioPreview />
-          <WhyUs />
-          <Faq />
-        </main>
-        <SiteFooter />
+      <div className="relative bg-transparent text-white">
+        <PageBackground />
+        <div className="relative z-10">
+          <SiteHeader />
+          <main>
+            <Hero />
+            <Services />
+            <FeatureStrip />
+            <AboutPreview />
+            <PortfolioPreview />
+            <WhyUs />
+            <Faq />
+          </main>
+          <SiteFooter />
+        </div>
       </div>
     </>
   );

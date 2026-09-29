@@ -14,18 +14,18 @@ export default function ContactPage() {
     <>
       <SiteHeader />
       <main>
-        <section className="border-b border-slate-100 bg-slate-50/80">
+        <section className="border-b border-white/10 bg-[#060b10]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <p className="inline-flex rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+            <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#0a121c] px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
               Contact Us
             </p>
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-brand-950 sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Let&apos;s talk about{" "}
-              <span className="bg-linear-to-r from-brand-950 via-brand-600 to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-white via-[#008DDA] to-sky-500 bg-clip-text text-transparent">
                 your next move
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-500">
+            <p className="mt-4 max-w-2xl text-lg text-slate-400">
               Reach out for a free consultation. Tell us what you need —
               financial, digital, or both — and we&apos;ll reply within one
               business day.

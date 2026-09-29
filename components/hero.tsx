@@ -1,101 +1,99 @@
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import Reveal from "@/components/reveal";
+"use client";
+
+import { ArrowDown, ArrowRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 
 export default function Hero() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section
       id="top"
-      className="relative -mt-[5.5rem] overflow-hidden bg-[#060b10] pt-[5.5rem]"
+      className="relative z-10 flex min-h-svh items-center overflow-hidden bg-transparent"
     >
-      {/* Animated orbs */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="anim-orb absolute top-[18%] left-[8%] h-40 w-40 rounded-full bg-[#008DDA]/20 blur-3xl" />
-        <div className="anim-orb absolute top-[55%] left-[35%] h-28 w-28 rounded-full bg-[#008DDA]/15 blur-2xl [animation-delay:1.2s]" />
-        <div className="absolute top-[30%] left-[20%] h-3 w-3 animate-bounce-soft rounded-full bg-[#008DDA]/70" />
-        <div className="absolute top-[62%] left-[12%] h-2 w-2 animate-bounce-soft rounded-full bg-white/40 [animation-delay:0.6s]" />
-        <div className="absolute top-[42%] left-[42%] h-2.5 w-2.5 animate-float rounded-full bg-[#008DDA]/50 [animation-delay:1s]" />
-      </div>
-
-      {/* Full-bleed right image */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[54%] lg:block"
-      >
-        <Image
-          src="/hero-premium-office.png"
-          alt=""
-          fill
-          priority
-          sizes="54vw"
-          className="animate-ken-burns object-cover object-[center_8%] will-change-transform"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#060b10] via-[#060b10]/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060b10]/40 via-transparent to-transparent" />
-        <div className="absolute -left-8 top-1/4 h-48 w-48 animate-glow-pulse rounded-full bg-[#008DDA]/25 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 sm:pt-12 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-24 lg:pt-14">
-        <div className="relative z-10 max-w-xl">
-          <Reveal variant="blur" delay={0}>
-            <p className="text-sm font-semibold tracking-wide text-[#008DDA]">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8 lg:py-32">
+        <div className="max-w-2xl text-left">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="inline-flex items-center gap-3"
+          >
+            <span className="h-px w-8 bg-[#008DDA]" />
+            <p className="text-sm font-semibold tracking-[0.18em] text-[#008DDA] uppercase">
               Innovative Solutions for a Smarter Tomorrow
             </p>
-          </Reveal>
+          </motion.div>
 
-          <Reveal variant="up" delay={120}>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-              We Build Digital{" "}
-              <span className="anim-shimmer bg-[linear-gradient(90deg,#008DDA_0%,#7dd3fc_40%,#008DDA_80%)] bg-clip-text text-transparent">
-                Solutions
-              </span>{" "}
-              That Drive Real Business Growth
-            </h1>
-          </Reveal>
+          <motion.h1
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.12]"
+          >
+            We Build Digital{" "}
+            <span className="bg-[linear-gradient(90deg,#008DDA_0%,#7dd3fc_50%,#008DDA_100%)] bg-clip-text text-transparent">
+              Solutions
+            </span>{" "}
+            That Drive Real Business Growth
+          </motion.h1>
 
-          <Reveal variant="up" delay={240}>
-            <p className="mt-5 text-lg leading-relaxed text-white/80">
-              From CPA-led accounting and tax to web development, SEO, and
-              marketing — Elite Solution helps businesses scale with clarity and
-              confidence.
-            </p>
-          </Reveal>
+          <motion.p
+            initial={reduceMotion ? false : { opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.75,
+              delay: 0.24,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300"
+          >
+            From CPA-led accounting and tax to web development, SEO, and
+            marketing — Elite Solution helps businesses scale with clarity and
+            confidence.
+          </motion.p>
 
-          <Reveal variant="up" delay={360}>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="/contact"
-                className="glow-btn group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg bg-[#008DDA] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#008DDA]/30 transition-all hover:-translate-y-0.5 hover:bg-[#0099ef]"
-              >
-                <span className="absolute inset-0 anim-shimmer bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.25)_50%,transparent_80%)] opacity-40" />
-                <span className="relative">Get Started</span>
-                <ArrowRight className="relative h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#services"
-                className="glow-btn-light inline-flex items-center justify-center gap-2 rounded-lg border border-white/80 bg-transparent px-6 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:border-white hover:bg-white/10"
-              >
-                Our Services
-              </a>
-            </div>
-          </Reveal>
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.36,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+          >
+            <a
+              href="/contact"
+              className="glow-btn group inline-flex items-center justify-center gap-2 rounded-lg bg-[#008DDA] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#008DDA]/35 transition-all hover:-translate-y-0.5 hover:bg-[#0099ef]"
+            >
+              Get Started
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="#services"
+              className="glow-btn-light inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/10"
+            >
+              Our Services
+            </a>
+          </motion.div>
         </div>
-
-        {/* Mobile / tablet image */}
-        <Reveal variant="scale" delay={200} className="lg:hidden">
-          <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[16/11]">
-            <Image
-              src="/hero-premium-office.png"
-              alt="Elite Solution team collaborating in a modern office"
-              fill
-              priority
-              sizes="100vw"
-              className="animate-ken-burns object-cover object-[center_15%]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#060b10] via-transparent to-[#060b10]/40" />
-          </div>
-        </Reveal>
       </div>
+
+      <motion.a
+        href="#services"
+        initial={reduceMotion ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/45 transition-colors hover:text-white/80"
+      >
+        <span className="text-[10px] tracking-[0.25em] uppercase">Scroll</span>
+        <ArrowDown className="h-4 w-4 animate-bounce-soft" />
+      </motion.a>
     </section>
   );
 }

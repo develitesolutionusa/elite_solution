@@ -82,7 +82,7 @@ const social = [
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#050910] text-slate-400">
+    <footer className="border-t border-white/10 bg-[#050910]/80 text-slate-400 backdrop-blur-sm">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <a href="/" className="flex items-center gap-2.5">

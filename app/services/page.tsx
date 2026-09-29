@@ -18,19 +18,19 @@ export const metadata: Metadata = {
 function ServiceCard({ service }: { service: ServiceItem }) {
   const Icon = service.icon;
   return (
-    <article className="glow-card flex h-full flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-600/5">
+    <article className="glow-card flex h-full flex-col rounded-2xl border border-white/10 bg-[#0a121c] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#008DDA]/30 hover:shadow-xl hover:shadow-brand-600/5">
       <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white">
         <Icon className="h-5 w-5" />
       </span>
-      <h3 className="mt-4 text-lg font-bold text-brand-950">{service.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-500">
+      <h3 className="mt-4 text-lg font-bold text-white">{service.title}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-slate-400">
         {service.description}
       </p>
       <ul className="mt-5 space-y-2.5">
         {service.items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2 text-sm text-slate-600"
+            className="flex items-start gap-2 text-sm text-slate-300"
           >
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
             {item}
@@ -57,13 +57,13 @@ function CategorySection({
   return (
     <section id={id} className="scroll-mt-28">
       <div className="max-w-2xl">
-        <p className="inline-flex rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+        <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#008DDA]/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
           {eyebrow}
         </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-950 sm:text-4xl">
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           {title}
         </h2>
-        <p className="mt-3 text-lg text-slate-500">{description}</p>
+        <p className="mt-3 text-lg text-slate-400">{description}</p>
       </div>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
@@ -80,18 +80,18 @@ export default function ServicesPage() {
       <SiteHeader />
       <main>
         {/* Page hero */}
-        <section className="border-b border-slate-100 bg-slate-50/80">
+        <section className="border-b border-white/10 bg-[#060b10]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <p className="inline-flex rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-950 uppercase">
+            <p className="inline-flex rounded-full border border-[#008DDA]/30 bg-[#0a121c] px-4 py-1.5 text-xs font-semibold tracking-wide text-white uppercase">
               Our Services
             </p>
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-brand-950 sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Two practice areas.{" "}
-              <span className="bg-linear-to-r from-brand-950 via-brand-600 to-sky-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-white via-[#008DDA] to-sky-500 bg-clip-text text-transparent">
                 One accountable partner.
               </span>
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-500">
+            <p className="mt-4 max-w-2xl text-lg text-slate-400">
               Choose Financial Services for your books and compliance, or Non
               Financial Services for digital growth — or combine both under one
               team.
@@ -105,7 +105,7 @@ export default function ServicesPage() {
               </a>
               <a
                 href="#non-financial"
-                className="glow-btn-light inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition-colors hover:border-brand-400"
+                className="glow-btn-light inline-flex items-center gap-2 rounded-xl border border-[#008DDA]/30 bg-[#0a121c] px-5 py-3 text-sm font-semibold text-[#008DDA] transition-colors hover:border-[#008DDA]"
               >
                 Non Financial Services
               </a>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA */}
-        <section className="border-t border-slate-100 bg-brand-600">
+        <section className="border-t border-white/10 bg-brand-600">
           <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:px-8">
             <div>
               <h2 className="text-2xl font-bold text-white sm:text-3xl">
@@ -144,7 +144,7 @@ export default function ServicesPage() {
             </div>
             <Link
               href="/contact"
-              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-brand-700 transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              className="glow-btn-light inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#008DDA] transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
               Request a free consultation
               <ArrowRight className="h-4 w-4" />

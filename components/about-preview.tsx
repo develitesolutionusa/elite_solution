@@ -11,7 +11,7 @@ const highlights = [
 
 export default function AboutPreview() {
   return (
-    <section id="about" className="scroll-mt-28 bg-[#0a121c]">
+    <section id="about" className="scroll-mt-28 bg-[#0a121c]/55 backdrop-blur-[2px]">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <Reveal variant="up">
           <div className="mx-auto max-w-2xl text-center">

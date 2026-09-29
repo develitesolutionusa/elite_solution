@@ -3,7 +3,7 @@ import Reveal from "@/components/reveal";
 
 export default function WhyUs() {
   return (
-    <section className="scroll-mt-20 bg-[#0a121c] py-8 sm:py-12">
+    <section className="scroll-mt-20 bg-transparent py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal variant="scale">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c1828] via-[#0a2040] to-[#008DDA]/40">

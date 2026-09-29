@@ -38,7 +38,7 @@ export default function PortfolioPreview() {
   return (
     <section
       id="portfolio"
-      className="scroll-mt-28 border-t border-white/5 bg-[#060b10]"
+      className="scroll-mt-28 border-t border-white/5 bg-[#060b10]/55 backdrop-blur-[2px]"
     >
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <Reveal variant="up">
@@ -57,11 +57,7 @@ export default function PortfolioPreview() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {previewProjects.map((project, index) => (
-            <Reveal
-              key={project.title}
-              variant="scale"
-              delay={index * 110}
-            >
+            <Reveal key={project.title} variant="scale" delay={index * 110}>
               <Link
                 href="/portfolio"
                 className="glow-card group block overflow-hidden rounded-2xl border border-white/10 bg-[#0a121c] shadow-sm transition-all hover:-translate-y-2 hover:border-[#008DDA]/40"

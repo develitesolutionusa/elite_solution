@@ -6,7 +6,7 @@ import Reveal from "@/components/reveal";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-28 bg-[#060b10]">
+    <section id="services" className="scroll-mt-28 bg-[#060b10]/55 backdrop-blur-[2px]">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <Reveal variant="up">
           <div className="mx-auto max-w-2xl text-center">
